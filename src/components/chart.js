@@ -3,7 +3,7 @@ import { scaleBand, scaleLinear } from 'd3-scale';
 import { max } from 'd3-array';
 import { axisBottom, axisLeft } from 'd3-axis';
 import { select } from 'd3-selection';
-import './chart.css';
+import '../styles/chart.css';
 
 class Chart extends React.Component {
 
