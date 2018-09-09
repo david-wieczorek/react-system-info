@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import Chart from './components/chart';
-import PlainInfo from './components/plain-info';
+import Chart from './components/Chart';
+import PlainInfo from './components/PlainInfo';
 
 import * as mettricsFile from './data/mettrics';
 
@@ -121,7 +121,7 @@ class App extends Component {
 
   renderChartComponent(){
     if (this.state.results.length > 0){
-      return <Chart values={ this.state.results } average={ this.state.average }></Chart>
+      return <Chart data={ this.state.results } param={ this.state.paramValue } average={ this.state.average }></Chart>
     } else {
       return null;
     }
@@ -154,7 +154,7 @@ class App extends Component {
             </div>
           </div>
           <div className='info'>
-          { this.renderPlainInfoComponent() }
+          { /**this.renderPlainInfoComponent()**/ }
           { this.renderChartComponent() }
           </div>
         </div>
